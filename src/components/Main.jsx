@@ -6,6 +6,9 @@ export default function Main() {
 
 
     const [budino, setBudino] = useState(null)
+    console.log(budino)
+    console.log(setBudino);
+
 
     function budinoInTavola(id) {
         setBudino(budino === id ? null : id)
