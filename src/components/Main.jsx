@@ -3,7 +3,10 @@ import { useState } from "react"
 
 export default function Main() {
 
-    languages
+
+
+    // const [budino, setBudino] = useState(0)
+
 
 
     return (
@@ -21,7 +24,11 @@ export default function Main() {
 
             <div class="card my-5">
                 <div class="card-body">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                    {languages.map((cosine) => (
+                        <p key={cosine.id}>{cosine.description}</p>
+                    ))}
+
                 </div>
             </div>
         </main>
