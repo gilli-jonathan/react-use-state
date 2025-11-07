@@ -1,28 +1,22 @@
+import languages from "../../use_State_assets/languages"
+import { useState } from "react"
+
 export default function Main() {
+
+    languages
 
 
     return (
 
         <main className="container">
             <div className="d-flex">
-                <button className="btn btn-primary">
-                    <h3>HTML</h3>
-                </button>
-                <button className="btn btn-primary">
-                    <h3>CSS</h3>
-                </button>
-                <button className="btn btn-primary">
-                    <h3>JavaScript</h3>
-                </button>
-                <button className="btn btn-primary">
-                    <h3>Node.js</h3>
-                </button>
-                <button className="btn btn-primary">
-                    <h3>Express</h3>
-                </button>
-                <button className="btn btn-primary">
-                    <h3>ReactJs</h3>
-                </button>
+
+                {languages.map((cosine) => (
+                    <button key={cosine.id} className="btn btn-primary">
+                        <h3>{cosine.title}</h3>
+                    </button>
+                ))}
+
             </div>
 
             <div class="card my-5">
@@ -34,3 +28,9 @@ export default function Main() {
 
     )
 }
+
+
+
+{/* <button className="btn btn-primary">
+    <h3>HTML</h3>
+</button> */}
