@@ -5,7 +5,12 @@ export default function Main() {
 
 
 
-    // const [budino, setBudino] = useState(0)
+    const [budino, setBudino] = useState(null)
+
+    function budinoInTavola(id) {
+        setBudino(budino === id ? null : id)
+
+    }
 
 
 
@@ -15,18 +20,20 @@ export default function Main() {
             <div className="d-flex">
 
                 {languages.map((cosine) => (
-                    <button key={cosine.id} className="btn btn-primary">
+                    <button onClick={() => budinoInTavola(cosine.id)} key={cosine.id} className="btn btn-primary">
                         <h3>{cosine.title}</h3>
                     </button>
                 ))}
 
             </div>
 
-            <div class="card my-5">
-                <div class="card-body">
+            <div className="card my-5">
+                <div className="card-body">
 
                     {languages.map((cosine) => (
-                        <p key={cosine.id}>{cosine.description}</p>
+
+                        budino === cosine.id && <p key={cosine.id}>{cosine.description}</p>
+
                     ))}
 
                 </div>
