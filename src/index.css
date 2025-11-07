@@ -2,3 +2,11 @@ header {
   background-color: #e6e6e6;
   padding: 1rem;
 }
+
+main{
+
+margin: 3rem 0;
+  button {
+    margin-right: 1rem;
+  }
+}
