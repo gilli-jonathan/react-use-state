@@ -6,12 +6,15 @@ export default function Main() {
 
 
     const [budino, setBudino] = useState(null)
-    console.log(budino)
-    console.log(setBudino);
-
 
     function budinoInTavola(id) {
         setBudino(budino === id ? null : id)
+
+        // if (budino === id ){
+        //     setBudino(null)
+        // } else { 
+        //     setBudino(id)
+        // }
 
     }
 
@@ -45,9 +48,3 @@ export default function Main() {
 
     )
 }
-
-
-
-{/* <button className="btn btn-primary">
-    <h3>HTML</h3>
-</button> */}
